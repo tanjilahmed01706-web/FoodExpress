@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "addresses",
+  "info": {
+    "singularName": "address",
+    "pluralName": "addresses",
+    "displayName": "Address",
+    "description": "Saved delivery addresses of customers"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "label": { "type": "string", "default": "Home" },
+    "line": { "type": "string", "required": true },
+    "note": { "type": "string" },
+    "lat": { "type": "float" },
+    "lng": { "type": "float" },
+    "isDefault": { "type": "boolean", "default": false },
+    "user": { "type": "relation", "relation": "manyToOne", "target": "plugin::users-permissions.user", "required": true }
+  }
+}

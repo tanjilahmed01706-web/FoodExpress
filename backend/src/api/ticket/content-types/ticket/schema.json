@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tickets",
+  "info": {
+    "singularName": "ticket",
+    "pluralName": "tickets",
+    "displayName": "Support Ticket",
+    "description": "Customer support conversations"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "subject": { "type": "string", "required": true },
+    "message": { "type": "text", "required": true },
+    "type": { "type": "enumeration", "enum": ["order", "payment", "account", "restaurant", "other"], "default": "order" },
+    "status": { "type": "enumeration", "enum": ["open", "replied", "closed"], "default": "open" },
+    "replies": { "type": "json" },
+    "user": { "type": "relation", "relation": "manyToOne", "target": "plugin::users-permissions.user", "required": true }
+  }
+}

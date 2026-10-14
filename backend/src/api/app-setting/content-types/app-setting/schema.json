@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "app_settings",
+  "info": {
+    "singularName": "app-setting",
+    "pluralName": "app-settings",
+    "displayName": "App Setting",
+    "description": "Global platform settings: branding, logo, fees, contact info"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "siteName": { "type": "string", "default": "FoodExpress" },
+    "tagline": { "type": "string", "default": "Fast • Fresh • For You" },
+    "logo": { "type": "media", "multiple": false, "required": false, "allowedTypes": ["images"] },
+    "favicon": { "type": "media", "multiple": false, "required": false, "allowedTypes": ["images"] },
+    "primaryColor": { "type": "string", "default": "#D70F64" },
+    "accentColor": { "type": "string", "default": "#FF2B85" },
+    "currency": { "type": "string", "default": "BDT" },
+    "currencySymbol": { "type": "string", "default": "৳" },
+    "announcement": { "type": "string" },
+    "heroTitle": { "type": "string", "default": "What are you craving today?" },
+    "heroSubtitle": { "type": "string", "default": "Order food from the best restaurants near you" },
+    "contactEmail": { "type": "string", "default": "hello@foodexpress.com" },
+    "contactPhone": { "type": "string", "default": "+880 1700-000000" },
+    "addressLine": { "type": "string", "default": "Brahmanbaria, Bangladesh" },
+    "defaultDeliveryFee": { "type": "decimal", "default": 40 },
+    "freeDeliveryThreshold": { "type": "decimal", "default": 500 },
+    "taxRate": { "type": "decimal", "default": 5 },
+    "commissionRate": { "type": "decimal", "default": 15 },
+    "footerText": { "type": "string", "default": "FoodExpress — Fast • Fresh • For You" },
+    "socials": { "type": "json" }
+  }
+}

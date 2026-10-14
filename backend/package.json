@@ -1,0 +1,53 @@
+{
+  "name": "backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "scripts": {
+    "build": "strapi build",
+    "console": "strapi console",
+    "deploy": "strapi deploy",
+    "dev": "strapi develop",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi",
+    "upgrade": "npx @strapi/upgrade latest",
+    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react-swc": "npm:@vitejs/plugin-react@^4.3.4",
+    "@strapi/database": "5.58.0",
+    "@strapi/plugin-cloud": "5.58.0",
+    "@strapi/plugin-users-permissions": "5.58.0",
+    "@strapi/strapi": "5.58.0",
+    "better-sqlite3": "13.0.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.30.3",
+    "styled-components": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=20.0.0 <=26.x.x",
+    "npm": ">=6.0.0"
+  },
+  "overrides": {
+    "@vitejs/plugin-react-swc": "$@vitejs/plugin-react-swc"
+  },
+  "strapi": {
+    "uuid": "b27e4109-0949-452d-b1dd-2e1ed27d6e13",
+    "installId": "9931afc14da1e12867df51267a7f54d47a73b4df795b21f64a93f33a851ff753"
+  },
+  "allowScripts": {
+    "@swc/core@1.16.18": true,
+    "esbuild@0.28.2": true,
+    "esbuild@0.25.12": true,
+    "core-js-pure@3.50.0": true,
+    "better-sqlite3@13.0.3": true
+  }
+}

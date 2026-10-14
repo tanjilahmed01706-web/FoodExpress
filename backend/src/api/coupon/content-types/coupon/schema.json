@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coupons",
+  "info": {
+    "singularName": "coupon",
+    "pluralName": "coupons",
+    "displayName": "Coupon",
+    "description": "Discount codes usable at checkout"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "code": { "type": "string", "required": true, "unique": true },
+    "title": { "type": "string" },
+    "description": { "type": "text" },
+    "type": { "type": "enumeration", "enum": ["percent", "fixed"], "default": "percent" },
+    "value": { "type": "decimal", "default": 10 },
+    "minOrder": { "type": "decimal", "default": 0 },
+    "maxDiscount": { "type": "decimal" },
+    "expiryDate": { "type": "datetime" },
+    "usageLimit": { "type": "integer", "default": 0 },
+    "usedCount": { "type": "integer", "default": 0 },
+    "isActive": { "type": "boolean", "default": true },
+    "restaurant": { "type": "relation", "relation": "manyToOne", "target": "api::restaurant.restaurant" }
+  }
+}

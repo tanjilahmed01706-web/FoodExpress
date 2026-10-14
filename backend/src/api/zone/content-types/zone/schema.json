@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zones",
+  "info": {
+    "singularName": "zone",
+    "pluralName": "zones",
+    "displayName": "Delivery Zone",
+    "description": "Delivery areas defined as polygons on the map"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "city": { "type": "string", "default": "Brahmanbaria" },
+    "color": { "type": "string", "default": "#D70F64" },
+    "deliveryFee": { "type": "decimal", "default": 40 },
+    "minOrder": { "type": "decimal", "default": 0 },
+    "isActive": { "type": "boolean", "default": true },
+    "polygon": { "type": "json" },
+    "centerLat": { "type": "float", "default": 23.957 },
+    "centerLng": { "type": "float", "default": 90.725 }
+  }
+}

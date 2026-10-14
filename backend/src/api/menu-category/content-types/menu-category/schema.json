@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menu_categories",
+  "info": {
+    "singularName": "menu-category",
+    "pluralName": "menu-categories",
+    "displayName": "Menu Category",
+    "description": "Groups of menu items inside a restaurant menu"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "sortOrder": { "type": "integer", "default": 0 },
+    "isAvailable": { "type": "boolean", "default": true },
+    "restaurant": { "type": "relation", "relation": "manyToOne", "target": "api::restaurant.restaurant", "required": true }
+  }
+}

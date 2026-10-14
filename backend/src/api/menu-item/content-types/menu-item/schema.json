@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menu_items",
+  "info": {
+    "singularName": "menu-item",
+    "pluralName": "menu-items",
+    "displayName": "Menu Item",
+    "description": "A dish sold by a restaurant"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "description": { "type": "text" },
+    "price": { "type": "decimal", "required": true },
+    "comparePrice": { "type": "decimal" },
+    "image": { "type": "media", "multiple": false, "required": false, "allowedTypes": ["images"] },
+    "isAvailable": { "type": "boolean", "default": true },
+    "isVegetarian": { "type": "boolean", "default": false },
+    "isSpicy": { "type": "boolean", "default": false },
+    "prepTime": { "type": "integer", "default": 10 },
+    "category": { "type": "relation", "relation": "manyToOne", "target": "api::menu-category.menu-category" },
+    "restaurant": { "type": "relation", "relation": "manyToOne", "target": "api::restaurant.restaurant", "required": true }
+  }
+}

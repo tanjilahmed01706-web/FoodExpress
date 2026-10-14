@@ -1,0 +1,29 @@
+# Node / dependency artifacts
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+node_modules/.tmp/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Freebuff runtime
+.freebuff/
+
+# Test / coverage
+coverage/
+*.lcov

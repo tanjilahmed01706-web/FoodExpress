@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurants",
+  "info": {
+    "singularName": "restaurant",
+    "pluralName": "restaurants",
+    "displayName": "Restaurant",
+    "description": "Multi-tenant restaurant store owned by a partner account"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "slug": { "type": "uid", "targetField": "name" },
+    "tagline": { "type": "string" },
+    "description": { "type": "text" },
+    "logo": { "type": "media", "multiple": false, "required": false, "allowedTypes": ["images"] },
+    "cover": { "type": "media", "multiple": false, "required": false, "allowedTypes": ["images"] },
+    "phone": { "type": "string" },
+    "email": { "type": "email" },
+    "address": { "type": "string", "required": true },
+    "city": { "type": "string", "default": "Brahmanbaria" },
+    "lat": { "type": "float", "default": 23.957 },
+    "lng": { "type": "float", "default": 90.725 },
+    "cuisines": { "type": "relation", "relation": "manyToMany", "target": "api::cuisine.cuisine" },
+    "zone": { "type": "relation", "relation": "manyToOne", "target": "api::zone.zone" },
+    "openingHours": { "type": "json" },
+    "isOpen": { "type": "boolean", "default": true },
+    "isApproved": { "type": "boolean", "default": false },
+    "isFeatured": { "type": "boolean", "default": false },
+    "rating": { "type": "float", "default": 0 },
+    "ratingCount": { "type": "integer", "default": 0 },
+    "deliveryTimeMin": { "type": "integer", "default": 25 },
+    "deliveryTimeMax": { "type": "integer", "default": 45 },
+    "deliveryFee": { "type": "decimal", "default": 40 },
+    "minOrder": { "type": "decimal", "default": 100 },
+    "commissionRate": { "type": "decimal", "default": 15 },
+    "owner": { "type": "relation", "relation": "oneToOne", "target": "plugin::users-permissions.user" }
+  }
+}

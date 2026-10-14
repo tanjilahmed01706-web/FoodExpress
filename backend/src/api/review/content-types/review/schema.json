@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews",
+  "info": {
+    "singularName": "review",
+    "pluralName": "reviews",
+    "displayName": "Review",
+    "description": "Customer ratings and comments for restaurants"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "rating": { "type": "integer", "required": true, "min": 1, "max": 5 },
+    "comment": { "type": "text" },
+    "isApproved": { "type": "boolean", "default": true },
+    "restaurant": { "type": "relation", "relation": "manyToOne", "target": "api::restaurant.restaurant", "required": true },
+    "user": { "type": "relation", "relation": "manyToOne", "target": "plugin::users-permissions.user", "required": true }
+  }
+}

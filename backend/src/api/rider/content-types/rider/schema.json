@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "riders",
+  "info": {
+    "singularName": "rider",
+    "pluralName": "riders",
+    "displayName": "Rider",
+    "description": "Delivery rider profile linked to a user account"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "phone": { "type": "string" },
+    "vehicleType": { "type": "enumeration", "enum": ["bicycle", "motorbike", "car"], "default": "motorbike" },
+    "isAvailable": { "type": "boolean", "default": false },
+    "isApproved": { "type": "boolean", "default": false },
+    "currentLat": { "type": "float", "default": 23.957 },
+    "currentLng": { "type": "float", "default": 90.725 },
+    "rating": { "type": "float", "default": 0 },
+    "ratingCount": { "type": "integer", "default": 0 },
+    "totalDeliveries": { "type": "integer", "default": 0 },
+    "totalEarnings": { "type": "decimal", "default": 0 },
+    "zone": { "type": "relation", "relation": "manyToOne", "target": "api::zone.zone" },
+    "user": { "type": "relation", "relation": "oneToOne", "target": "plugin::users-permissions.user" }
+  }
+}

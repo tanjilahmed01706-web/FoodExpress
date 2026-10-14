@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cuisines",
+  "info": {
+    "singularName": "cuisine",
+    "pluralName": "cuisines",
+    "displayName": "Cuisine",
+    "description": "Food categories used to filter restaurants"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "slug": { "type": "uid", "targetField": "name" },
+    "description": { "type": "text" },
+    "icon": { "type": "string" },
+    "image": { "type": "media", "multiple": false, "required": false, "allowedTypes": ["images"] },
+    "sortOrder": { "type": "integer", "default": 0 }
+  }
+}
